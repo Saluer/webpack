@@ -29,9 +29,6 @@ module.exports = {
 		path: path.resolve(__dirname, "dist"),
 	},
 	plugins: [
-		new HTMLWebpackPlugin({
-			template: "./index.html",
-		}),
 		...PAGES.map(
 			(page) =>
 				new HTMLWebpackPlugin({
@@ -42,6 +39,9 @@ module.exports = {
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
 	],
+	optimization: {
+		runtimeChunk: "single",
+	},
 	devServer: {
 		port: 4200,
 		hot: isDev,

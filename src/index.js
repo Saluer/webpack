@@ -1,5 +1,6 @@
 import Post from "./Post";
-import "./styles/style.scss"
+import "./styles/colorsAndTypes.scss";
+import "./styles/form-elements.scss";
 
 const post = new Post("123");
 

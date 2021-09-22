@@ -1,0 +1,7 @@
+mixin  fieldWrapper(labelText="УКАЖИТЕ НАДПИСЬ", inputValue="УКАЖИТЕ ТЕКСТ", type="textfield")
+
+    case type
+        when "textfield"
+            div.field-wrapper
+                label.field-wrapper__label=labelText
+                input.field-wrapper__input(value=inputValue, placeholder="Пустота") 
