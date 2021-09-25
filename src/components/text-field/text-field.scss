@@ -2,24 +2,18 @@
 	display: flex;
 	flex-direction: column;
 
-	&__label {
-		font-size: 12px;
-		line-height: 15px;
-		font-weight: bold;
-		color: getDarkShadeColor("full");
-		text-transform: uppercase;
-		margin-bottom: 5px;
-	}
-
 	&__input-wrapper {
+		display: flex;
+		flex-direction: row;
 		border: 1px solid getDarkShadeColor("little");
+		border-radius: 4px;
 	}
-
 	&__input {
+		cursor: inherit;
 		width: 100%;
 		border: none;
-		padding: 12px 15px 8px 15px;
 		border-radius: 4px;
+		padding: 12px 15px 8px 15px;
 
 		&:placeholder-shown {
 			color: getDarkShadeColor("little");
@@ -27,18 +21,16 @@
 
 		&:hover,
 		&:focus,
-		&_hover-focus {
+		&_hover\/focus {
 			border-color: getDarkShadeColor("semi");
 		}
 	}
-
+	&__icon {
+		width: 40px;
+		height: 40px;
+		color: getDarkShadeColor("semi");
+	}
 	&_dropdown {
 		cursor: pointer;
-		&__input {
-			cursor: none;
-			&::after {
-				content: 1312;
-			}
-		}
 	}
 }

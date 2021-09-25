@@ -1,10 +1,12 @@
 //Страница form-elements
 include ../../../components/text-field/text-field.pug
+//- ...
+- var Icon = require("./ui-kit/form-elements/expand_more.svg");
 section.section 
     .section__column
-        +fieldWrapper("Text Field", "", "textfield")(modifier="default")
-        +fieldWrapper("Text Field", "This is pretty awesome", "textfield")(modifier="hover-focus")
-        +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
+        +fieldWrapper("Text Field", "", "textfield", "default")
+        +fieldWrapper("Text Field", "This is pretty awesome", "textfield", "hover/focus")
+        +fieldWrapper("Dropdown", "Сколько гостей", "dropdown")
         +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
         div.section__row 
             +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
@@ -12,11 +14,11 @@ section.section
         +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
         +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
     .section__column
-        +fieldWrapper("Text Field", "", "textfield")(modifier="default")
-        +fieldWrapper("Text Field", "This is pretty awesome", "textfield")(modifier="hover-focus")
+        +fieldWrapper("Text Field", "", "textfield")(labelInfo="default")
+        +fieldWrapper("Text Field", "This is pretty awesome", "textfield")(labelInfo="hover-focus")
         +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
     .section__column
-        +fieldWrapper("Text Field", "", "textfield")(modifier="default")
-        +fieldWrapper("Text Field", "This is pretty awesome", "textfield")(modifier="hover-focus")
+        +fieldWrapper("Text Field", "", "textfield")(labelInfo="default")
+        +fieldWrapper("Text Field", "This is pretty awesome", "textfield")(labelInfo="hover-focus")
         +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
 

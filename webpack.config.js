@@ -1,5 +1,4 @@
 const path = require("path");
-const fs = require("fs");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -12,11 +11,11 @@ const PATHS = {
 };
 
 const PAGES_DIR = `${PATHS.src}/pug/`;
-// const PAGES = fs
-// 	.readdirSync(PAGES_DIR)
-// 	.filter((fileName) => fileName.endsWith(".pug"));
 
 module.exports = {
+	experiments: {
+		asset: true,
+	},
 	context: path.resolve(__dirname, "src"),
 	mode: "development",
 	entry: { main: "./index.js" },
@@ -60,6 +59,11 @@ module.exports = {
 			{
 				test: /\.pug$/,
 				use: ["pug-loader"],
+			},
+
+			{
+				test: /\.(svg|png)$/,
+				type: "asset",
 			},
 		],
 	},

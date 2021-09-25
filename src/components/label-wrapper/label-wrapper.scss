@@ -1,0 +1,27 @@
+.label-wrapper {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__input-wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.label {
+	color: getDarkShadeColor("full");
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+
+.label_label-info{
+    color: getDarkShadeColor("semi");
+    font-weight: normal;
+}

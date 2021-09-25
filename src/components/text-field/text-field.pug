@@ -1,14 +1,22 @@
-mixin fieldWrapper(labelText="УКАЖИТЕ НАДПИСЬ", inputValue="УКАЖИТЕ ТЕКСТ", type="textfield")
+include ../label-wrapper/label-wrapper.pug
+
+//TODO установить post-css, позаботиться о том, чтобы при пустом labelInfo не вставляло класс с undefined 
+mixin fieldWrapper(labelText="УКАЖИТЕ НАДПИСЬ", inputValue="УКАЖИТЕ ТЕКСТ", type="textfield", labelInfo)
 
     case type
         when "textfield"
             div.field-wrapper(class != "field-wrapper_" + type)
-                h3.field-wrapper__label=labelText
-                .field-wrapper__input-wrapper(class!="field-wrapper__input_" + attributes.modifier)
-                    input.field-wrapper__input(value=inputValue, placeholder="Email")
+                +labelWrapper(labelText, labelInfo)
+                .field-wrapper__input-wrapper 
+                    input.field-wrapper__input(value=inputValue, placeholder="Email")(class!="field-wrapper__input_" + labelInfo)
 
         when "dropdown"
             div.field-wrapper(class != "field-wrapper_" + type)
-                h3.field-wrapper__label=labelText
-                .field-wrapper__input-wrapper(class!="field-wrapper__input_" + attributes.modifier)
-                    input.field-wrapper__input(value=inputValue, placeholder="Email")
+                +labelWrapper(labelText, labelInfo)
+                .field-wrapper__input-wrapper
+                    input.field-wrapper__input(value=inputValue, placeholder="Email")(class!="field-wrapper__input_" + labelInfo, readonly)
+                    //- ...
+                    svg.field-wrapper__icon(xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24")
+                        path(d="M0 0h24v24H0z" fill="none")
+                        path(d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z")
+                        
