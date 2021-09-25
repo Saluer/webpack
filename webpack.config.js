@@ -9,33 +9,26 @@ const isDev = process.env.NODE_ENV === "development";
 const PATHS = {
 	src: path.join(__dirname, "./src"),
 	dist: path.join(__dirname, "./dist"),
-	assets: "assets/",
 };
 
-// Pages const for HtmlWebpackPlugin
-// see more: https://github.com/vedees/webpack-template/blob/master/README.md#html-dir-folder
-// const PAGES_DIR = PATHS.src
-const PAGES_DIR = `${PATHS.src}/pug/pages/`;
-const PAGES = fs
-	.readdirSync(PAGES_DIR)
-	.filter((fileName) => fileName.endsWith(".pug"));
+const PAGES_DIR = `${PATHS.src}/pug/`;
+// const PAGES = fs
+// 	.readdirSync(PAGES_DIR)
+// 	.filter((fileName) => fileName.endsWith(".pug"));
 
 module.exports = {
 	context: path.resolve(__dirname, "src"),
 	mode: "development",
-	entry: { main: "./index.js"},
+	entry: { main: "./index.js" },
 	output: {
 		filename: "[name].[contenthash].js",
 		path: path.resolve(__dirname, "dist"),
 	},
 	plugins: [
-		...PAGES.map(
-			(page) =>
-				new HTMLWebpackPlugin({
-					template: `${PAGES_DIR}/${page}`,
-					filename: `./${page.replace(/\.pug/, ".html")}`,
-				})
-		),
+		new HTMLWebpackPlugin({
+			template: `${PAGES_DIR}/index.pug`,
+			filename: `./index.html`,
+		}),
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
 	],

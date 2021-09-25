@@ -1,0 +1,44 @@
+.field-wrapper {
+	display: flex;
+	flex-direction: column;
+
+	&__label {
+		font-size: 12px;
+		line-height: 15px;
+		font-weight: bold;
+		color: getDarkShadeColor("full");
+		text-transform: uppercase;
+		margin-bottom: 5px;
+	}
+
+	&__input-wrapper {
+		border: 1px solid getDarkShadeColor("little");
+	}
+
+	&__input {
+		width: 100%;
+		border: none;
+		padding: 12px 15px 8px 15px;
+		border-radius: 4px;
+
+		&:placeholder-shown {
+			color: getDarkShadeColor("little");
+		}
+
+		&:hover,
+		&:focus,
+		&_hover-focus {
+			border-color: getDarkShadeColor("semi");
+		}
+	}
+
+	&_dropdown {
+		cursor: pointer;
+		&__input {
+			cursor: none;
+			&::after {
+				content: 1312;
+			}
+		}
+	}
+}

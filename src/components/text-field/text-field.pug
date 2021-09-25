@@ -1,0 +1,14 @@
+mixin fieldWrapper(labelText="УКАЖИТЕ НАДПИСЬ", inputValue="УКАЖИТЕ ТЕКСТ", type="textfield")
+
+    case type
+        when "textfield"
+            div.field-wrapper(class != "field-wrapper_" + type)
+                h3.field-wrapper__label=labelText
+                .field-wrapper__input-wrapper(class!="field-wrapper__input_" + attributes.modifier)
+                    input.field-wrapper__input(value=inputValue, placeholder="Email")
+
+        when "dropdown"
+            div.field-wrapper(class != "field-wrapper_" + type)
+                h3.field-wrapper__label=labelText
+                .field-wrapper__input-wrapper(class!="field-wrapper__input_" + attributes.modifier)
+                    input.field-wrapper__input(value=inputValue, placeholder="Email")

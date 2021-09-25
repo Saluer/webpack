@@ -1,0 +1,22 @@
+//Страница form-elements
+include ../../../components/text-field/text-field.pug
+section.section 
+    .section__column
+        +fieldWrapper("Text Field", "", "textfield")(modifier="default")
+        +fieldWrapper("Text Field", "This is pretty awesome", "textfield")(modifier="hover-focus")
+        +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
+        +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
+        div.section__row 
+            +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
+            +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
+        +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
+        +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
+    .section__column
+        +fieldWrapper("Text Field", "", "textfield")(modifier="default")
+        +fieldWrapper("Text Field", "This is pretty awesome", "textfield")(modifier="hover-focus")
+        +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
+    .section__column
+        +fieldWrapper("Text Field", "", "textfield")(modifier="default")
+        +fieldWrapper("Text Field", "This is pretty awesome", "textfield")(modifier="hover-focus")
+        +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
+

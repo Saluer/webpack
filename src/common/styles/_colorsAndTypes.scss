@@ -1,9 +1,14 @@
 //Colors
-$dark-shade-full: rgba(31, 32, 65, 1);
-$dark-shade-almost: rgba(31, 32, 65, 0.75);
-$dark-shade-semi: rgba(31, 32, 65, 0.5);
-$dark-shade-little: rgba(31, 32, 65, 0.25);
-$dark-shade-bit: rgba(31, 32, 65, 0.05);
+$dark-shade: (
+	"full": rgba(31, 32, 65, 1),
+	"almost": rgba(31, 32, 65, 0.75),
+	"semi": rgba(31, 32, 65, 0.5),
+	"little": rgba(31, 32, 65, 0.25),
+	"bit": rgba(31, 32, 65, 0.05),
+);
+@function getDarkShadeColor($intensivity) {
+	@return map-get($map: $dark-shade, $key: $intensivity);
+}
 $purple: #bc9cff;
 $green: #6fcf97;
 
@@ -31,11 +36,10 @@ h3 {
 	text-transform: uppercase;
 }
 
-
 body {
 	background-color: rgb(255, 255, 255);
 	font-family: Montserrat;
 	font-size: 14px;
 	line-height: 24px;
-	color: $dark-shade-almost;
+	color: getDarkShadeColor("almost");
 }
