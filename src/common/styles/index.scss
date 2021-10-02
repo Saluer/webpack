@@ -1,15 +1,15 @@
-//common
+/*common*/
 @import "colorsAndTypes.scss";
 @import "general.scss";
 
-//ui-kit
+/*ui-kit*/
 @import "../../pug/ui-kit/form-elements/form-elements.scss";
 
-//components
-//Надо оптимизировать, чтобы стили сами подгружались, по возможности
+/*components*/
+/*Надо оптимизировать, чтобы стили сами подгружались, по возможности*/
 @import "../../components/field-wrapper/field-wrapper.scss";
 @import "../../components/field-wrapper/_dropdown/field-wrapper_dropdown.scss";
-// @import "../../components/field-wrapper/_textfield/field-wrapper_textfield.scss";
+/* @import "../../components/field-wrapper/_textfield/field-wrapper_textfield.scss";*/
 @import "../../components/input-wrapper/input-wrapper.scss";
 @import "../../components/input-wrapper/__input/input-wrapper__input.scss";
 @import "../../components/input-wrapper/_dropdown/input-wrapper_dropdown.scss";
@@ -21,6 +21,7 @@
 @import "../../components/check-box/check-box.scss";
 @import "../../components/check-box-wrapper/check-box-wrapper.scss";
 @import "../../components/radio-button-list/radio-button-list.scss";
-// @import "../../components/check-box-wrapper/__label/check-box-wrapper__label.scss";
+@import "../../components/radio-button/radio-button.scss";
+/* @import "../../components/check-box-wrapper/__label/check-box-wrapper__label.scss";*/
 @import "../../components/header/header.scss";
 @import "../../components/label-wrapper/label-wrapper.scss";
