@@ -47,6 +47,7 @@ module.exports = {
 					isDev ? "style-loader" : MiniCssExtractPlugin.loader,
 					"css-loader",
 					"sass-loader",
+					"postcss-loader",
 				],
 			},
 			{
@@ -54,6 +55,7 @@ module.exports = {
 				use: [
 					isDev ? "style-loader" : MiniCssExtractPlugin.loader,
 					"css-loader",
+					"postcss-loader",
 				],
 			},
 			{

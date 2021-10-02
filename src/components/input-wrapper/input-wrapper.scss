@@ -1,0 +1,17 @@
+.input-wrapper {
+	display: flex;
+	flex-direction: row;
+	border: 1px solid getDarkShadeColor("little");
+	border-radius: 4px;
+
+	&:hover,
+	&:focus,
+	&_hover\/focus {
+		border-color: getDarkShadeColor("semi");
+	}
+
+	&__icon {
+		width: 40px;
+		height: 40px;
+	}
+}

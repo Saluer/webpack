@@ -1,4 +1,7 @@
+include ../label/label.pug
+include ./__info/label-wrapper__info.pug
+
 mixin labelWrapper(labelText, labelInfo)
     .label-wrapper 
-        h3.label=labelText
-        h3.label.label_label-info #{labelInfo}
+        +label({labelText:labelText})
+        +label({labelInfo:labelInfo})

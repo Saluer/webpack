@@ -1,6 +1,25 @@
+//common
 @import "colorsAndTypes.scss";
-@import "../../components/text-field/text-field.scss";
 @import "general.scss";
+
+//ui-kit
+@import "../../pug/ui-kit/form-elements/form-elements.scss";
+
+//components
+//Надо оптимизировать, чтобы стили сами подгружались, по возможности
+@import "../../components/field-wrapper/field-wrapper.scss";
+@import "../../components/field-wrapper/_dropdown/field-wrapper_dropdown.scss";
+// @import "../../components/field-wrapper/_textfield/field-wrapper_textfield.scss";
+@import "../../components/input-wrapper/input-wrapper.scss";
+@import "../../components/input-wrapper/__input/input-wrapper__input.scss";
+@import "../../components/input-wrapper/_dropdown/input-wrapper_dropdown.scss";
+@import "../../components/label/label.scss";
+@import "../../components/label/_info/label_info.scss";
+@import "../../components/label-wrapper/label-wrapper.scss";
+@import "../../components/label-wrapper/__info/label-wrapper__info.scss";
+@import "../../components/check-box-list/check-box-list.scss";
+@import "../../components/check-box/check-box.scss";
+@import "../../components/check-box-wrapper/check-box-wrapper.scss";
+// @import "../../components/check-box-wrapper/__label/check-box-wrapper__label.scss";
 @import "../../components/header/header.scss";
 @import "../../components/label-wrapper/label-wrapper.scss";
-@import "../../pug/ui-kit/form-elements/form-elements.scss";

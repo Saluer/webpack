@@ -1,7 +1,8 @@
 //- Страница form-elements
-include ../../../components/text-field/text-field.pug
-//- ...
-- var Icon = require("./ui-kit/form-elements/expand_more.svg");
+include ../../../components/field-wrapper/field-wrapper.pug
+include ../../../components/check-box-list/check-box-list.pug
+
+//- - var Icon = require("./ui-kit/form-elements/expand_more.svg");
 section.section 
     .section__column
         +fieldWrapper({labelText:"Text Field", inputValue:"This is pretty awesome", type:"textfield", labelInfo:"default"})
@@ -15,11 +16,7 @@ section.section
         //- Добавить иконку
         +fieldWrapper({labelText:"subscription text field", type:"textfield", placeholder:"Email"})
     .section__column
-        +fieldWrapper("Text Field", "", "textfield")(labelInfo="default")
-        +fieldWrapper("Text Field", "This is pretty awesome", "textfield")(labelInfo="hover-focus")
-        +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
+        +checkBoxList({label:"Checkbox Buttons", checkBoxesDataCollection:[{value:123, isChecked:false}, {value:321, isChecked:true}, {value:"фми", isChecked:true}]})
     .section__column
-        +fieldWrapper("Text Field", "", "textfield")(labelInfo="default")
-        +fieldWrapper("Text Field", "This is pretty awesome", "textfield")(labelInfo="hover-focus")
-        +fieldWrapper("Text Field", "This is pretty awesome", "dropdown")
+
 
