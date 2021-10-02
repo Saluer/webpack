@@ -1,0 +1,6 @@
+include ../label/label.pug
+include ../check-box-list/check-box-list.pug
+mixin checkBoxListWrapper(options)
+    .check-box-list-wrapper
+        +label({labelText:options.label})
+        +checkBoxList(options)

@@ -2,6 +2,5 @@ include ../check-box-wrapper/check-box-wrapper.pug
 
 mixin checkBoxList(options)
     .check-box-list
-        h3.label #{options.label}
         -for(var checkBoxData of options.checkBoxesDataCollection)
-            +checkBox(checkBoxData)
+            +checkBoxWrapper(checkBoxData)

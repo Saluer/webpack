@@ -1,6 +1,7 @@
 //- Страница form-elements
 include ../../../components/field-wrapper/field-wrapper.pug
-include ../../../components/check-box-list/check-box-list.pug
+include ../../../components/check-box-list-wrapper/check-box-list-wrapper.pug
+include ../../../components/radio-button-list-wrapper/radio-button-list-wrapper.pug
 
 //- - var Icon = require("./ui-kit/form-elements/expand_more.svg");
 section.section 
@@ -16,7 +17,8 @@ section.section
         //- Добавить иконку
         +fieldWrapper({labelText:"subscription text field", type:"textfield", placeholder:"Email"})
     .section__column
-        +checkBoxList({label:"Checkbox Buttons", checkBoxesDataCollection:[{value:123, isChecked:false}, {value:321, isChecked:true}, {value:"фми", isChecked:true}]})
+        +checkBoxListWrapper({label:"Checkbox Buttons", checkBoxesDataCollection:[{value:123, isChecked:false}, {value:321, isChecked:true}, {value:"фми", isChecked:true}]})
+        +radioButtonListWrapper({label:"Radio Buttons", name:"sex", radioButtonsDataCollection:[{value:"Мужчина", isChecked:true}, {value:"Женщина", isChecked:false}]})
     .section__column
 
 

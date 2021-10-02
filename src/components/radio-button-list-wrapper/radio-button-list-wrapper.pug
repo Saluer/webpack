@@ -1,0 +1,6 @@
+include ../label/label.pug
+include ../radio-button-list/radio-button-list.pug
+mixin radioButtonListWrapper(options)
+    .radio-button-list-wrapper
+        +label({labelText:options.label})
+        +radioButtonList(options)

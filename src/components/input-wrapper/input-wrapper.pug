@@ -1,6 +1,6 @@
 include ./__input/input-wrapper__input.pug
 mixin inputWrapper(options)
-    .input-wrapper(class != "input-wrapper_" + options.labelInfo)(class != "input-wrapper_" + options.type)
+    .input-wrapper(class != "input-wrapper_" + options.labelInfo + " input-wrapper_" + options.type)
         +inputWrapper__input(options)
         if options.type === "dropdown"
             +expandMoreIcon
