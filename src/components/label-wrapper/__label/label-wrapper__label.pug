@@ -1,0 +1,5 @@
+mixin labelWrapper__label(options)
+    if options.labelText
+        h3.label-wrapper__label #{options.labelText}
+    else if options.labelInfo
+        h3.label-wrapper__label.label-wrapper__label_info #{options.labelInfo}

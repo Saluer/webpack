@@ -1,0 +1,6 @@
+include ../../check-box-wrapper/check-box-wrapper.pug
+
+mixin checkBoxListWrapper__checkBoxList(options)
+    .check-box-list-wrapper__check-box-list
+        -for(var checkBoxData of options.checkBoxesDataCollection)
+            +checkBoxWrapper(checkBoxData)

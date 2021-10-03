@@ -3,8 +3,8 @@ include ../input-wrapper/input-wrapper.pug
 
 //- TODO установить post-css, позаботиться о том, чтобы при пустом labelInfo не вставляло класс с undefined 
 mixin fieldWrapper(options)
-    div.field-wrapper(class != "field-wrapper_" + options.type)
-        +labelWrapper(options.labelText, options.labelInfo)
+    div.field-wrapper(class = "field-wrapper_" + options.type)
+        +labelWrapper({labelText:options.labelText, labelInfo:options.labelInfo})
         +inputWrapper(options)
 
 

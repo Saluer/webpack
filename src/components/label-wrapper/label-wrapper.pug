@@ -1,7 +1,7 @@
-include ../label/label.pug
-include ./__info/label-wrapper__info.pug
+include ./__label/label-wrapper__label.pug
 
-mixin labelWrapper(labelText, labelInfo)
+mixin labelWrapper(options)
     .label-wrapper 
-        +label({labelText:labelText})
-        +label({labelInfo:labelInfo})
+        +labelWrapper__label({labelText:options.labelText})
+        if options.labelInfo
+            +labelWrapper__label({labelInfo:options.labelInfo})

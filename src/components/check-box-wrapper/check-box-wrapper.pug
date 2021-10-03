@@ -1,6 +1,6 @@
 include ./__label/check-box-wrapper__label
-include ../check-box/check-box.pug
+include ./__check-box/check-box-wrapper__check-box.pug
 mixin checkBoxWrapper(checkBoxData)
     .check-box-wrapper
-        +checkBox(checkBoxData)
+        +checkBoxWrapper__checkBox(checkBoxData)
         +checkBoxWrapper__label(checkBoxData)

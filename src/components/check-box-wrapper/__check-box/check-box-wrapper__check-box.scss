@@ -1,4 +1,4 @@
-.check-box {
+.check-box-wrapper__check-box {
 	appearance: none;
 	cursor: pointer;
 	width: 20px;
@@ -10,10 +10,16 @@
 	&-wrapper {
 		display: flex;
 		&__label {
+			display: inline-block;
 			color: getDarkShadeColor("semi");
-			display: inline;
 			vertical-align: bottom;
 		}
+	}
+	/*???*/
+	&:after {
+		content: "\2714";
+		font-size: 14px;
+		color: #fff;
 	}
 	&:active,
 	&:checked {

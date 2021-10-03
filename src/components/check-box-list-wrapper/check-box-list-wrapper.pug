@@ -1,6 +1,6 @@
-include ../label/label.pug
-include ../check-box-list/check-box-list.pug
+include ../label-wrapper/label-wrapper.pug
+include ./__check-box-list/check-box-list-wrapper__check-box-list.pug
 mixin checkBoxListWrapper(options)
     .check-box-list-wrapper
-        +label({labelText:options.label})
-        +checkBoxList(options)
+        +labelWrapper({labelText:options.label})
+        +checkBoxListWrapper__checkBoxList(options)

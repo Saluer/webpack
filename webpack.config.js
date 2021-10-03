@@ -45,17 +45,26 @@ module.exports = {
 				test: /\.s[ca]ss$/,
 				use: [
 					isDev ? "style-loader" : MiniCssExtractPlugin.loader,
-					"css-loader",
-					"sass-loader",
-					"postcss-loader",
+					{ loader: "css-loader", options: { sourceMap: true } },
+					{
+						loader: "postcss-loader",
+						options: { sourceMap: true, postcssOptions:{config: "postcss.config.js"} },
+					},
+					{
+						loader: "sass-loader",
+						options: { sourceMap: true },
+					},
 				],
 			},
 			{
 				test: /\.css$/,
 				use: [
 					isDev ? "style-loader" : MiniCssExtractPlugin.loader,
-					"css-loader",
-					"postcss-loader",
+					{ loader: "css-loader", options: { sourceMap: true } },
+					{
+						loader: "postcss-loader",
+						options: { sourceMap: true, postcssOptions:{config: "postcss.config.js"} },
+					},
 				],
 			},
 			{
