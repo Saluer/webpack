@@ -1,6 +1,6 @@
-include ../radio-button/radio-button.pug
+include ./__radio-button/radio-button-wrapper__radio-button.pug
 include ./__label/radio-button-wrapper__label.pug
 mixin radioButtonWrapper(options)
     .radio-button-wrapper
-        +radioButton(options)
+        +radioButtonWrapper__radioButton(options)
         +radioButtonWrapper__label(options)
