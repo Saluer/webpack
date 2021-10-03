@@ -1,0 +1,7 @@
+include ./__toggle/toggle-wrapper__toggle.pug
+include ./__label/toggle-wrapper__label.pug
+
+mixin toggleWrapper(toggleData)
+    .toggle-wrapper 
+        +toggleWrapper__toggle({toggleData:toggleData})
+        +toggleWrapper__label({toggleData:toggleData})

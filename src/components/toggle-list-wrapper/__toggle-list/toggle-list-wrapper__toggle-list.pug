@@ -1,0 +1,6 @@
+include ../../toggle-wrapper/toggle-wrapper.pug
+
+mixin toggleListWrapper__toggleList(toggleListDataCollection)
+    .toggle-list-wrapper__toggle-list 
+        -for (var toggleData of toggleListDataCollection)
+            +toggleWrapper(toggleData)

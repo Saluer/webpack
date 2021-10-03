@@ -1,0 +1,7 @@
+include ../label-wrapper/label-wrapper.pug
+include ./__toggle-list/toggle-list-wrapper__toggle-list.pug
+
+mixin toggleListWrapper(options)
+    .toggle-list-wrapper 
+        +labelWrapper({labelText:options.labelText})
+        +toggleListWrapper__toggleList(options.toggleListDataCollection)

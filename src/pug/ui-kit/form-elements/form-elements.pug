@@ -2,6 +2,7 @@
 include ../../../components/field-wrapper/field-wrapper.pug
 include ../../../components/check-box-list-wrapper/check-box-list-wrapper.pug
 include ../../../components/radio-button-list-wrapper/radio-button-list-wrapper.pug
+include ../../../components/toggle-list-wrapper/toggle-list-wrapper.pug
 
 //- - var Icon = require("./ui-kit/form-elements/expand_more.svg");
 section.section 
@@ -19,6 +20,7 @@ section.section
     .section__column
         +checkBoxListWrapper({label:"Checkbox Buttons", checkBoxesDataCollection:[{value:123, isChecked:false}, {value:321, isChecked:true}, {value:"фми", isChecked:true}]})
         +radioButtonListWrapper({label:"Radio Buttons", name:"sex", radioButtonsDataCollection:[{value:"Мужчина", isChecked:true}, {value:"Женщина", isChecked:false}]})
+        +toggleListWrapper({labelText:"toggle", toggleListDataCollection:[{value:"Получать спецпредложения", isChecked:true},{value:"Получать спецпредложения", isChecked:false} ]} )
     .section__column
 
 

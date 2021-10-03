@@ -1,0 +1,32 @@
+.toggle-wrapper__toggle {
+	appearance: none;
+    cursor: pointer;
+	width: 40px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: #fff;
+	border: 1px solid rgba(31, 32, 65, 0.25);
+
+    &::after{
+        content:"";
+        position: relative;
+        display: block;
+        top:0.2rem;
+        left:1.4rem;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+        background: rgba(31, 32, 65, 0.25);
+        transition: left 0.3s;
+    }
+    &:checked{
+        border: 1px solid #BC9CFF;
+        &::after{
+            top:0.2rem;
+            left:0.4rem;
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        }
+    }
+}
