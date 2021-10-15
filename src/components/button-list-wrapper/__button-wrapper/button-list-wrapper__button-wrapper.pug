@@ -1,0 +1,9 @@
+include ./__radio-button/radio-button-wrapper__radio-button.pug
+include ../__label/button-list-wrapper__button-label.pug
+
+mixin buttonWrapper(options)
+    case options.type
+        when "rate"
+            .rate-button-wrapper
+                +rateButtonWrapper__rateButton(options)
+                +buttonListWrapper__buttonLabel(options)
