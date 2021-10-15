@@ -3,8 +3,9 @@ include ../../../components/field-wrapper/field-wrapper.pug
 include ../../../components/check-box-list-wrapper/check-box-list-wrapper.pug
 include ../../../components/radio-button-list-wrapper/radio-button-list-wrapper.pug
 include ../../../components/toggle-list-wrapper/toggle-list-wrapper.pug
+include ../../../components/like-button-list-wrapper/like-button-list-wrapper.pug
+include ../../../components/rate-button-list-wrapper/rate-button-list-wrapper.pug
 
-//- - var Icon = require("./ui-kit/form-elements/expand_more.svg");
 section.section 
     .section__column
         +fieldWrapper({labelText:"Text Field", inputValue:"This is pretty awesome", type:"textfield", labelInfo:"default"})
@@ -19,8 +20,10 @@ section.section
         +fieldWrapper({labelText:"subscription text field", type:"textfield", placeholder:"Email"})
     .section__column
         +checkBoxListWrapper({label:"Checkbox Buttons", checkBoxesDataCollection:[{value:123, isChecked:false}, {value:321, isChecked:true}, {value:"фми", isChecked:true}]})
-        +radioButtonListWrapper({label:"Radio Buttons", name:"sex", radioButtonsDataCollection:[{value:"Мужчина", isChecked:true}, {value:"Женщина", isChecked:false}]})
-        +toggleListWrapper({labelText:"toggle", toggleListDataCollection:[{value:"Получать спецпредложения", isChecked:true},{value:"Получать спецпредложения", isChecked:false} ]} )
+        +radioButtonListWrapper({label:"Radio Buttons", name:"sex", data:[{value:"Мужчина", isChecked:true}, {value:"Женщина", isChecked:false}]})
+        +toggleListWrapper({labelText:"toggle", data:[{value:"Получать спецпредложения", isChecked:true},{value:"Получать спецпредложения", isChecked:false} ]} )
+        +likeButtonListWrapper({labelText:"like button", data:[{value:2, isChecked:false}, {value:12, isChecked:true}]})
+        +rateButtonListWrapper({labelText:"rate button", data:[{value:4}, {value:5}]})
     .section__column
 
 

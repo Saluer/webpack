@@ -1,0 +1,7 @@
+include ../label-wrapper/label-wrapper.pug
+include ./__like-button-list/like-button-list-wrapper__like-button-list.pug
+
+mixin likeButtonListWrapper(options)
+    .like-button-list-wrapper
+        +labelWrapper({labelText:options.labelText})
+        +likeButtonListWrapper__likeButtonList(options.data)

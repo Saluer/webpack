@@ -2,5 +2,5 @@ include ../../label-wrapper/label-wrapper.pug
 include ../../radio-button-wrapper/radio-button-wrapper.pug
 mixin radioButtonListWrapper__radioButtonList(options)
     .radio-button-list-wrapper__radio-button-list
-        -for (var radioButtonData of options.radioButtonsDataCollection)
+        -for (var radioButtonData of options.data)
             +radioButtonWrapper({radioButtonData:radioButtonData, name:options.name})

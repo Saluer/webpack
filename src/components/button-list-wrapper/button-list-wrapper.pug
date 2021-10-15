@@ -1,0 +1,8 @@
+include ../label-wrapper/label-wrapper.pug
+include ./__rate-button-list/rate-button-list-wrapper__rate-button-list.pug
+mixin buttonListWrapper(options)
+    case options.type
+        when "rate"
+            .rate-button-list-wrapper
+                +labelWrapper({labelText:options.label})
+                +rateButtonListWrapper__rateButtonList(options)

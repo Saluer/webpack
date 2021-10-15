@@ -1,0 +1,9 @@
+mixin likeButton(likeButtonData)
+    if likeButtonData.isChecked
+        .like-button.like-button_checked
+            span.material-icons.like-button__icon favorite
+            label #{likeButtonData.value}  
+    else
+        .like-button
+            span.material-icons.like-button__icon favorite_border
+            label #{likeButtonData.value}

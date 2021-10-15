@@ -1,0 +1,6 @@
+include ../../like-button/like-button.pug
+
+mixin likeButtonListWrapper__likeButtonList(likeButtonsListDataCollection)
+    .like-button-list-wrapper__like-button-list
+        -for(var likeButtonData of likeButtonsListDataCollection)
+            +likeButton(likeButtonData)

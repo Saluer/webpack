@@ -1,0 +1,6 @@
+include ../../label-wrapper/label-wrapper.pug
+include ../__rate-button-wrapper/rate-button-list-wrapper__rate-button-wrapper.pug
+mixin radioButtonListWrapper__radioButtonList(options)
+    .radio-button-list-wrapper__radio-button-list
+        -for (var rateButtonData of options.data)
+            +rateButtonWrapper({radioButtonData:radioButtonData, name:options.name})
